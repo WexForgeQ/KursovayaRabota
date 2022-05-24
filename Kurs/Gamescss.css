@@ -1,0 +1,435 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.pg
+{
+    background-color: black;
+    display: grid;
+    grid-template-areas: 
+    'nav  games'
+    'nav mfooter'
+    'nav gminfo'
+    'nav m2footer'
+    'nav  gamesf'
+    'nav  hfooter'
+    'nav  footer';
+    grid-template-columns:70px 1fr;
+    grid-template-rows:691px 80px auto auto 2073px 329px 1fr;
+    max-width: 2400px;
+    width: 100%;
+    height: auto;
+}
+#mfooter
+{
+    position: relative;
+    grid-area: mfooter;
+    background-color: #FFFFFF;
+}
+#nv
+{
+    position: relative;
+    grid-area:nav;
+    background-color: black;
+
+} 
+#games
+{
+    object-fit: cover;
+    display: grid;
+    position: relative;
+    grid-area:games;
+    grid-template-columns: repeat(3, 1fr);
+}
+#gamesf
+{
+    display:grid;
+    grid-template-rows:repeat(3, 1fr);
+    position: relative;
+    grid-area: gamesf;
+    background-color: #ff0000;
+}
+#hfooter
+{
+    position: relative;
+    grid-area:hfooter;
+    background-color: rgb(255, 255, 255);
+}
+#footer
+{
+    position: relative;
+    grid-area: footer;
+    background-color:rgb(0, 0, 0);
+}
+#gminfo
+{
+    position: relative;
+    grid-area: gminfo;
+    background-color:rgb(0, 0, 0);
+}
+
+ul 
+{
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    width: 100%;
+}
+
+li a
+{
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF; 
+    padding: 20px 0;
+    text-decoration:none;
+}
+
+#nv li a:hover
+{
+    text-decoration: underline red;
+    cursor: pointer;
+}
+
+.logo
+{
+position:relative;
+display: block;
+background-color: #FFFFFF;
+border: #000000;
+width: 70px;
+height: auto;
+}
+
+.lines
+{
+    width: 1fr;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+}
+.logohf
+{
+    width: 70%;
+    height:100%;
+    margin-left: 5%;
+   
+}
+.logohfd
+{
+    width: 30%;
+    height: 249px;
+    display: block;
+    float:left;
+}
+.hftext
+{
+    display:block;
+    width:30%;
+    height: 249px;
+    float: left;
+}
+
+.hftextl
+{
+font-family: 'Play';
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+}
+.hftextd
+{
+    height: auto;
+    position: relative;
+    top: 30%;
+}
+.socials
+{
+    position: relative;
+    float: left;
+    width: 40%;
+    height: 249px;
+}
+.icon1
+{
+    left:20%;
+    height: auto;
+    position: absolute;
+    width: 11%;
+    top:30%;
+    margin-right: 3%;
+}
+.icon2
+{
+    left:40%;
+    height: auto;
+    position: absolute;
+    width: 11%;
+    top:30%;
+    margin-right: 3%;
+}
+.icon3
+{
+    left:60%;
+    height: auto;
+    position: absolute;
+    width: 11%;
+    top:30%;
+    margin-right: 3%;
+}
+.icon4
+{
+    left:80%;
+    height: auto;
+    position: absolute;
+    width: 11%;
+    top:30%;
+    margin-right: 3%;
+}
+
+.slide1
+{
+    width:100%;
+    height: 100%;
+    position:relative;
+}
+.first:hover
+{
+ cursor: pointer;
+ opacity: 0;
+}
+@font-face
+ {
+    font-family: 'Play';
+    src: url(font/Play-Regular.ttf);
+}
+#footer:hover .line
+{
+cursor:pointer;
+stroke:red;
+}
+
+.videotxt1
+{
+position: relative;
+top:10%;
+left: auto;
+font-family: 'Play';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+text-align: center;
+color: #FFFFFF;
+}
+
+.awvid
+{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    object-fit:cover;
+}
+#gminfo p
+{
+position: absolute;
+width: auto;
+ height: auto;
+top:2%;
+font-family: 'Play';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+text-align: center;
+color: #FFFFFF;
+}
+.controlf
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 691px;
+    object-fit: cover;
+    transition: all .4s ease;
+}
+.controlfn
+{
+    position: relative;
+    
+}
+.controllogo
+{
+    display: block;
+    top:4%;
+    right: 2%;
+    position: absolute;
+    width:50%;
+    height:auto;
+    object-fit: fill;
+    max-width: 600px;
+    max-height:190px;
+}
+.controltext
+{
+    display: block;
+    top: 30%;
+    right: 1%;
+    position: absolute;
+    width:50%;
+    height:auto;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+.controltrailer
+{
+    display: block;
+    width:45%;
+    height: auto;
+    max-width: 640px;
+    max-height:480px;
+    position: absolute;
+    top: 30%;
+    left:2%;
+
+}
+.alanf
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 691px;
+    object-fit: cover;
+    transition: all .4s ease;
+}
+.alanfn
+{
+    position: relative;
+}
+.alanlogo
+{
+    top:3%;
+    right: 2%;
+    position: absolute;
+    width:50%;
+    height: 50%;
+    max-width: 600px;
+    max-height:190px;
+}
+.alantext
+{
+    display: block;
+    top: 30%;
+    right: 1%;
+    position: absolute;
+    width:50%;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+.alantrailer
+{
+    display: block;
+    width:45%;
+    height: auto;
+    max-width: 640px;
+    max-height:480px;
+    position: absolute;
+    top: 30%;
+    left:2%;
+}
+.qfn
+{
+ position: relative;
+}
+.quantumf
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 691px;
+    object-fit: cover;
+    transition: all .4s ease;
+}
+.qlogo
+{
+    top:3%;
+    right: 2%;
+    position: absolute;
+    width:50%;
+    height: 50%;
+    max-width: 600px;
+    max-height:190px;
+}
+.qtext
+{
+    display: block;
+    top: 30%;
+    right: 1%;
+    position: absolute;
+    width:50%;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+}
+.qtrailer
+{
+    display: block;
+    width:45%;
+    height: auto;
+    max-width: 640px;
+    max-height:480px;
+    position: absolute;
+    top: 30%;
+    left:2%;
+}
+.buynow
+{
+    display: block;
+    position:absolute;
+    width: 50;
+    height: 10%;
+    bottom: 10%;
+    right: 10%;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 28px;
+    color: #ffffff;
+    transition: all .4s ease;
+}
+.buynow:hover
+{
+ transform: scale(1.2);
+ cursor: pointer;
+}
+.buynowq:hover
+{
+ transform: scale(1.2);
+ cursor: pointer;
+}
+.ADmedia
+{
+    display:none;
+}
+.footerln
+{
+    position: relative;
+}

@@ -1,0 +1,187 @@
+@mixin properties($width, $height)
+{
+    width: $width;
+    height: $height;
+}
+@mixin gridproperties($pos, $area, $color)
+{
+    position: $pos;
+    grid-area: $area;
+    background-color: $color;
+}
+@mixin iconproperties($lft, $width, $height, $pos, $top, $mrg)
+{
+    left: $lft;
+    @include properties($width,$height);
+    position: $pos;
+    top: $top;
+    margin-right: $mrg;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pg {
+    background-color: black;
+    display: grid;
+    grid-template-areas: 'nav  slider' 'nav  hfooter' 'nav  footer';
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 691px 329px 1fr;
+    max-width: 2400px;
+    @include properties(100%,auto);
+  }
+  
+  #nv {
+    @include gridproperties(relative, nav , black);
+  }
+  
+  #slider {
+    @include gridproperties(relative, slider , white);
+    align-items: center;
+  }
+  
+  #hfooter {
+    @include gridproperties(relative, hfooter , white);
+  }
+  
+  #footer
+    {
+    @include gridproperties(relative, footer , black);
+  }
+  
+  ul {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include properties(100%,60px);
+  }
+  
+  li a {
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-decoration: none;
+  }
+  
+  #nv li a:hover {
+    text-decoration: underline red;
+    cursor: pointer;
+  }
+  
+  .logo {
+    position: relative;
+    display: block;
+    background-color: #FFFFFF;
+    border: #000000;
+    @include properties(70px,auto);
+  }
+  
+  .lines {
+    @include properties(1fr,80px);
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .logohf {
+    @include properties(70%,100%);
+    margin-left: 5%;
+  }
+  
+  .logohfd {
+    @include properties(30%,249px);
+    display: block;
+    float: left;
+  }
+  
+  .hftext {
+    display: block;
+    @include properties(30%,249px);
+    float: left;
+  }
+  
+  .hftextl {
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+  }
+  
+  .hftextd {
+    height: auto;
+    position: relative;
+    top: 30%;
+  }
+  
+  .socials {
+    position: relative;
+    float: left;
+    @include properties(40%,249px);
+  }
+  
+  .icon1 
+  {
+    @include iconproperties(20%, 11%, auto, absolute, 30%, 3%)
+  }
+  
+  .icon2 
+  {
+    @include iconproperties(40%, 11%, auto, absolute, 30%, 3%)
+  }
+  
+  .icon3 
+  {
+    @include iconproperties(60%, 11%, auto, absolute, 30%, 3%)
+  }
+  
+  .icon4 
+  {
+    @include iconproperties(80%, 11%, auto, absolute, 30%, 3%)
+  }
+  
+  .slide1
+   {
+    @include properties(100%,100%);
+    position: relative;
+  }
+  
+  .first:hover {
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  @font-face {
+    font-family: 'Play';
+    src: url(font/Play-Regular.ttf);
+  }
+  
+  #footer:hover .line {
+    cursor: pointer;
+    stroke: red;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .ADmedia {
+    display: none;
+  }
+  
+  .footerln {
+    position: relative;
+  }
+  
+  .VCAD, .ACAD {
+    display: none;
+  }
